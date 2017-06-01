@@ -1,0 +1,15 @@
+node default {
+
+  include motd
+
+
+     # ensure sshivamallu has user/pass on all node
+     user { 'sshivamallu_user':
+       name  		=>  'sshivamallu',
+       groups 		=>  'wheel',
+       managehome	=>  true,
+       password		=>  '$1$V2ZNVTWO$cjZ7EfOBe.Nh5PnIxCThH.',
+       ensure		=> present
+     }
+       
+}
